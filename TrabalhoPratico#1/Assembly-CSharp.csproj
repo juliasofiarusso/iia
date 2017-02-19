@@ -46,9 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CarBehavior2aDist.cs" />
      <Compile Include="Assets\Scripts\CarBehaviour.cs" />
      <Compile Include="Assets\Scripts\CarBehaviour2a.cs" />
+     <Compile Include="Assets\Scripts\CarBehaviour2aDistb.cs" />
      <Compile Include="Assets\Scripts\CarBehaviourDist.cs" />
      <Compile Include="Assets\Scripts\LightDetectorScript.cs" />
      <Compile Include="Assets\Scripts\ObjectDetectorScript.cs" />

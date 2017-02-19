@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CarBehaviour2aDist : CarBehaviourDist {
+public class CarBehaviour2aDistb : CarBehaviourDist {
 
 	void Update()
 	{
@@ -10,7 +10,7 @@ public class CarBehaviour2aDist : CarBehaviourDist {
 		float rightSensor = RightOB.GetLinearOutput (); //força do detector de luz dir
 
 		//Calculate target motor values
-		m_LeftWheelSpeed = rightSensor * MaxSpeed;
-		m_RightWheelSpeed = leftSensor * MaxSpeed;
+		m_LeftWheelSpeed = leftSensor * MaxSpeed;
+		m_RightWheelSpeed = rightSensor * MaxSpeed;
 	}
 }

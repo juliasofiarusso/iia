@@ -6,7 +6,7 @@ using System;
 public class ObjectDetectorScript : MonoBehaviour {
 
 	public float angle;
-
+	private bool useAngle = true;
 	public float strength;
 	public int numObjects;
 
@@ -14,27 +14,38 @@ public class ObjectDetectorScript : MonoBehaviour {
 		strength = 0;
 		numObjects = 0;
 
+		if (angle >= 360) {
+			useAngle = false;
+		}
+
 	}
 
 	void Update () {
-		GameObject[] Objects=  GetAllObjects ();
+		GameObject[] Objects;
+
+		if (useAngle) { //se o < for <360
+			Objects = GetAllObjects (); //feito com batota  -visible
+		} else {
+			Objects = GetVisibleObjects (); //all
+		}
+
 
 		strength = 0;
 		numObjects = Objects.Length;
 		float minDist = Mathf.Infinity;
-		//GameObject closer = null;
 		float current;
 
 		foreach (GameObject Object in Objects) {
-			current = Vector3.Distance(transform.position, Object.transform.position);
+			current = Vector3.Distance (transform.position, Object.transform.position);
+		
 
 			if (minDist > current) {
 				minDist = current;
 			}
+
 		}
 
-		strength = 1.0f / minDist; 
-
+		strength = 1.0f / minDist; //corrigir
 
 	}
 

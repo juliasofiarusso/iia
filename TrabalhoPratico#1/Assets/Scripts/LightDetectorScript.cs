@@ -51,7 +51,8 @@ public class LightDetectorScript : MonoBehaviour {
 	// Get gaussian output value
 	public virtual float GetGaussianOutput()
 	{
-		throw new NotImplementedException ();
+		//throw new NotImplementedException ();
+		return strength;
 	}
 		
 	// Returns all "Light" tagged objects. The sensor angle is not taken into account.

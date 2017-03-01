@@ -8,6 +8,8 @@ public class CarBehaviour : MonoBehaviour {
 	public WheelCollider RL;
 	public LightDetectorScript LeftLD;
 	public LightDetectorScript RightLD;
+	public ObjectDetectorScript LeftOB;
+	public ObjectDetectorScript RightOB;
 
 	private Rigidbody m_Rigidbody;
 	public float m_LeftWheelSpeed;

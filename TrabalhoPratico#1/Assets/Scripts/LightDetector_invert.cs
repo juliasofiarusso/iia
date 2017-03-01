@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using System;
 
-public class LightDetectorScript : MonoBehaviour {
+public class LightDetector_invert : MonoBehaviour {
 
 	public float angle;
 	private bool useAngle = true;
@@ -39,7 +39,7 @@ public class LightDetectorScript : MonoBehaviour {
 
 		strength = 0;
 		numObjects = lights.Length;
-	
+
 		foreach (GameObject light in lights) {
 			float r = light.GetComponent<Light> ().range;
 			strength += 1.0f / ((transform.position - light.transform.position).sqrMagnitude / r + 1);
@@ -60,14 +60,14 @@ public class LightDetectorScript : MonoBehaviour {
 	public virtual float GetGaussianOutput()
 	{
 		//throw new NotImplementedException ();
-	
-	//	y= Mathf.Exp(-1f * Mathf.Pow(strength - center, 2) / (2 * stanDevi * stanDevi));  //height is always 1
+
+		//	y= Mathf.Exp(-1f * Mathf.Pow(strength - center, 2) / (2 * stanDevi * stanDevi));  //height is always 1
 
 		//y= Mathf.Exp(-1f * Mathf.Pow(strength - 0.5f, 2) / (2 * 0.12f * 0.12f));  //height is always 1
 		y =  height  * Mathf.Exp(-1f * Mathf.Pow(strength - center, 2) / (2 * stanDevi * stanDevi));  //height is always 1
 		return y;
 	}
-		
+
 	// Returns all "Light" tagged objects. The sensor angle is not taken into account.
 	GameObject[] GetAllLights()
 	{

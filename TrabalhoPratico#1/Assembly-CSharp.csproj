@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\CarBehaviour_explorer.cs" />
      <Compile Include="Assets\Scripts\CarBehaviour_lover.cs" />
      <Compile Include="Assets\Scripts\CarBehaviour_luz_blocos.cs" />
+     <Compile Include="Assets\Scripts\CarBehaviour_oito.cs" />
      <Compile Include="Assets\Scripts\LightDetectorScript.cs" />
      <Compile Include="Assets\Scripts\LightDetector_atacante.cs" />
      <Compile Include="Assets\Scripts\LightDetector_invert.cs" />
